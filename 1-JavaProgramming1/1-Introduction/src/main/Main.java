@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("---------------------------------ESERCIZIO 1----------------------------------");
 		System.out.println(Main.moltiplica(2, 3));
 		System.out.println(Main.concatena("concatena ", 5));
-		String[] cinque = {"a","b","c","d","e"};
+		String[] cinque = {"a","b","c","d","e","f","g"};
 		String stringa = "terzo";
 		for(int i = 0; i < Main.inserisciInArray(cinque, stringa).length; i++) 
 			System.out.println(	Main.inserisciInArray(cinque, stringa)[i]);
@@ -31,7 +31,7 @@ public class Main {
 		 */
 		System.out.println("---------------------------------ESERCIZIO 2----------------------------------");
 		Scanner in = new Scanner(System.in);
-		String[] treStringhe = new String[5];
+		String[] treStringhe = new String[3];
 		System.out.println("Scrivi 3 stringhe");
 		for(int i = 0; i < treStringhe.length; i++) 
 			treStringhe[i] = in.nextLine();
@@ -87,7 +87,7 @@ public class Main {
 	}
 
 	static String[] inserisciInArray(String[] cinque, String s) {
-		String[] sei = new String[6];
+		String[] sei = new String[8];
 		for(int i = 0; i < sei.length; i++) {
 			if(i <= 1) 
 				sei[i] = cinque[i];
