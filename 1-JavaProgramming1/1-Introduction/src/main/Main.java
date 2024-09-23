@@ -31,18 +31,18 @@ public class Main {
 		 */
 		System.out.println("---------------------------------ESERCIZIO 2----------------------------------");
 		Scanner in = new Scanner(System.in);
-		String[] treStringhe = new String[3];
+		String[] treStringhe = new String[5];
 		System.out.println("Scrivi 3 stringhe");
-		for(int i = 0; i < treStringhe.length;i++) 
+		for(int i = 0; i < treStringhe.length; i++) 
 			treStringhe[i] = in.nextLine();
 		String concatenated = "";
-		for(int i = 0; i < treStringhe.length;i++) 
+		for(int i = 0; i < treStringhe.length; i++) 
 			concatenated += treStringhe[i];
-		System.out.println(concatenated);
+		System.out.println("Concatenazione: " + concatenated);
 		concatenated = "";
 		for(int i = treStringhe.length-1; i >= 0; i--) 
 			concatenated += treStringhe[i];
-		System.out.println(concatenated);
+		System.out.println("Reverse: " + concatenated);
 
 
 
@@ -90,10 +90,10 @@ public class Main {
 		for(int i = 0; i < sei.length; i++) {
 			if(i <= 1) 
 				sei[i] = cinque[i];
-			else if(i > 2) 
-				sei[i] = cinque[i-1];
-			else 
+			else if(i == 2) 
 				sei[i] = s;
+			else 
+				sei[i] = cinque[i-1];
 		}
 		return sei;
 	}
