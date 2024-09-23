@@ -94,7 +94,7 @@ public class Main {
 			else if(i == 2) 
 				sei[i] = s;
 			else 
-				sei[i] = cinque[i-1];
+				sei[i] = cinque[i - 1];
 		}
 		return sei;
 	}
@@ -104,7 +104,7 @@ public class Main {
 	}
 
 	static int pariDispari(int x) {
-		return x%2 == 0 ? 0 : 1;
+		return x%2 == 0? 0 : 1;
 	}
 
 	static double perimetroTriangolo(double a, double b, double c) {
