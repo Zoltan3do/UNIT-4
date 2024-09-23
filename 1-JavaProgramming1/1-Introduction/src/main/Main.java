@@ -12,16 +12,16 @@ public class Main {
 		 * - concatena: accetta una stringa e un intero e restituisce una stringa che concatena gli elementi;
 		 * 
 		 * - inserisciInArray: accetta un array di stringhe di cinque elementi ed una stringa e restituisce un 
-		 * array di sei 
-		 * elementi in cui la stringa passata sia al terzo posto e le stringhe precedentemente in quarta 
-		 * e quinta posizione siano rispettivamente in quinta e sesta.
+		 * array di sei elementi in cui la stringa passata sia al terzo posto 
+		 * e le stringhe precedentemente in quarta e quinta posizione siano rispettivamente in quinta e sesta.
 		 */
 		System.out.println("---------------------------------ESERCIZIO 1----------------------------------");
 		System.out.println(Main.moltiplica(2, 3));
 		System.out.println(Main.concatena("concatena ", 5));
 		String[] cinque = {"a","b","c","d","e"};
-		for(int i = 0; i < Main.inserisciInArray(cinque, "terzo").length;i++) 
-			System.out.println(	Main.inserisciInArray(cinque, "terzo")[i]);
+		String stringa = "terzo";
+		for(int i = 0; i < Main.inserisciInArray(cinque, stringa).length; i++) 
+			System.out.println(	Main.inserisciInArray(cinque, stringa)[i]);
 
 
 		
