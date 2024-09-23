@@ -118,7 +118,7 @@ public class Main {
 
 	static double perimetroTriangolo(double a, double b, double c) {
 		double s = (a + b + c)/2;
-		return Math.sqrt(s*((s - a)*(s - b)*(s - c)));
+		return Math.sqrt(s*(s - a)*(s - b)*(s - c));
 	}
 
 }// chiusura classe
