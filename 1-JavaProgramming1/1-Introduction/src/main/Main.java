@@ -32,18 +32,27 @@ public class Main {
 		System.out.println("---------------------------------ESERCIZIO 2----------------------------------");
 		Scanner in = new Scanner(System.in);
 		String[] treStringhe = new String[3];
-		System.out.println("Scrivi 3 stringhe");
-		for(int i = 0; i < treStringhe.length; i++) 
-			treStringhe[i] = in.nextLine();
-		String concatenated = "";
-		for(int i = 0; i < treStringhe.length; i++) 
-			concatenated += treStringhe[i];
-		System.out.println("Concatenazione: " + concatenated);
-		concatenated = "";
-		for(int i = treStringhe.length-1; i >= 0; i--) 
-			concatenated += treStringhe[i];
-		System.out.println("Reverse: " + concatenated);
 
+		System.out.println("Scrivi " + treStringhe.length + " stringhe");
+		String concatenated = "";
+		for(int i = 0; i < treStringhe.length; i++) {
+			treStringhe[i] = in.nextLine();
+			if(i != treStringhe.length)
+				concatenated += treStringhe[i] + " ";
+			else
+				concatenated += treStringhe[i];
+		}
+		System.out.println("Concatenazione: " + concatenated);
+
+		concatenated = "";
+
+		for(int i = treStringhe.length-1; i >= 0; i--) {
+			if(i != treStringhe.length)
+				concatenated += treStringhe[i] + " ";
+			else
+				concatenated += treStringhe[i];
+		}
+		System.out.println("Reverse: " + concatenated);
 
 
 		/*ESERCIZIO #3
@@ -73,7 +82,7 @@ public class Main {
 				c = Double.parseDouble(in.nextLine());
 		System.out.println("L'area del triangolo è : " + Main.perimetroTriangolo(a, b, c));
 		in.close();
-		
+
 	}// chiusura main
 
 
