@@ -24,7 +24,7 @@ public class Main {
 			System.out.println(	Main.inserisciInArray(cinque, stringa)[i]);
 
 
-		
+
 		/* Esercizio #2
 		 * Implementare il metodo main che chiede all'utente di inserire 3 stringhe da tastiera e scrive 
 		 * in console la concatenazione delle stringhe in ordine di inserimento e in ordine di inserimento inverso
@@ -74,8 +74,8 @@ public class Main {
 		System.out.println("L'area del triangolo è : " + Main.perimetroTriangolo(a, b, c));
 		in.close();
 	}// chiusura main
-	
-	
+
+
 
 	static int moltiplica(int x , int y) {
 		return x*y;
@@ -103,14 +103,12 @@ public class Main {
 	}
 
 	static int pariDispari(int x) {
-		if(x%2 == 0) 
-			return 0;
-		else return 1;
+		return x%2 == 0 ? 0 : 1;
 	}
 
 	static double perimetroTriangolo(double a, double b, double c) {
 		double s = (a + b + c)/2;
 		return Math.sqrt(s*(s - a)*(s - b)*(s - c));
 	}
-	 
+
 }// chiusura classe
