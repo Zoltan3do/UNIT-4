@@ -95,15 +95,15 @@ public class Main {
 		return s + i;
 	}
 
-	static String[] inserisciInArray(String[] cinque, String s) {
-		String[] sei = new String[8];
+	static String[] inserisciInArray(String[] arr, String s) {
+		String[] sei = new String[6];
 		for(int i = 0; i < sei.length; i++) {
 			if(i <= 1) 
-				sei[i] = cinque[i];
+				sei[i] = arr[i];
 			else if(i == 2) 
 				sei[i] = s;
 			else 
-				sei[i] = cinque[i - 1];
+				sei[i] = arr[i - 1];
 		}
 		return sei;
 	}
