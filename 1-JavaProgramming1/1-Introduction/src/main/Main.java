@@ -78,7 +78,7 @@ public class Main {
 	
 
 	static int moltiplica(int x , int y) {
-		return x * y;
+		return x*y;
 	}
 
 	static String concatena(String s, int i) {
@@ -99,7 +99,7 @@ public class Main {
 	}
 
 	static double perimetroRettangolo(double w, double h) {
-		return (w * 2) + (h * 2);
+		return (w*2) + (h*2);
 	}
 
 	static int pariDispari(int x) {
@@ -109,8 +109,8 @@ public class Main {
 	}
 
 	static double perimetroTriangolo(double a, double b, double c) {
-		double s = (a+b+c)/2;
-		return Math.sqrt(s*(s-a)*(s-b)*(s-c));
+		double s = (a + b + c)/2;
+		return Math.sqrt(s*(s - a)*(s - b)*(s - c));
 	}
-	
+	 
 }// chiusura classe
