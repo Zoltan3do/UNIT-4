@@ -21,11 +21,7 @@ public class Util {
 
 	public String intero (int genoveffa) {
 		String result = "";
-		for(int i = genoveffa; i >= 0; i--) 
-			if(i != 0) 
-				result += i + "\n";
-			else 
-				result += i;			
+		for(int i = genoveffa; i >= 0; i--) if(i != 0) result += i + "\n"; else result += i;			
 		return result;
 	}
 	
