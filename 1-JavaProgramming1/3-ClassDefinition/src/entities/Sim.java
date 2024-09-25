@@ -43,7 +43,7 @@ public class Sim {
 		}else { 
 			this.credito -= c.getDurata()*10;
 			if(this.ultimeChiamate.size() == 5) {
-				this.ultimeChiamate.remove(ultimeChiamate.size()-1);
+				this.ultimeChiamate.remove(0);
 				this.ultimeChiamate.add(c);
 			}else {
 				this.ultimeChiamate.add(c);
