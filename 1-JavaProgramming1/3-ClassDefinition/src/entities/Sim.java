@@ -40,8 +40,9 @@ public class Sim {
 	public void addCall(Chiamata c) {
 		if(c.getDurata() > credito / 10) {
 			System.out.println("Non hai il credito sufficiente!");
-		}else {
-			if(this.ultimeChiamate.size()==5) {
+		}else { 
+			this.credito -= c.getDurata()*10;
+			if(this.ultimeChiamate.size() == 5) {
 				this.ultimeChiamate.remove(ultimeChiamate.size()-1);
 				this.ultimeChiamate.add(c);
 			}else {
