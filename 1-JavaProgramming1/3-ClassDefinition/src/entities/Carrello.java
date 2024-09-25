@@ -33,13 +33,14 @@ public class Carrello {
 		this.clienteAssociato = clienteAssociato;
 	}
 
-	public Map<String, Articolo> getElencoArticoli() {
-		return elencoArticoli;
+	public String getElencoArticoli() {
+		String a="";
+		for(String articolo:elencoArticoli.keySet()) {
+			a+=elencoArticoli.get(articolo).toString()+"\n";
+		}
+		return a;
 	}
 
-	public void setElencoArticoli(Map<String,Articolo> elencoArticoli) {
-		this.elencoArticoli = elencoArticoli;
-	}
 
 	public double getTotCost() {
 		double tot = 0;

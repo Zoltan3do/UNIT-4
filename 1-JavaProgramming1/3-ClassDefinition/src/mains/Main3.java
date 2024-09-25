@@ -59,25 +59,27 @@ public class Main3 {
 		int n;
 		Articolo a;
 		Carrello c = new Carrello(cliente.getClienteAssociato(), articoli);
-		
+
 		do {
-			System.out.println("1)aggiungi qualcosa al carrelllo\n2)rimuovi qualcosa da carrello\n0)esci dal programma");
+			System.out.println("1)aggiungi qualcosa al carrelllo\n"
+					+ "2)rimuovi qualcosa da carrello\n"
+					+ "3)Visualizza carrello\n"
+					+ "0)esci dal programma");
 			switch(Integer.parseInt(in.nextLine())) {
 			case 1:
 				String ris;
-
 				System.out.println("Cosa vuoi aggiungere al carrello?\n");
-				
+
 				for(String k : articoli.keySet()) 
 					System.out.println(k);
-				
+
 				ris = in.nextLine();
-				
+
 				if(articoli.keySet().contains(ris)) {
 					a = articoli.get(ris);
 					System.out.println("Quanti pezzi vuoi acquistare?");
 					n = Integer.parseInt(in.nextLine());
-					if(a.getnPezzi() <= n) {
+					if(a.getnPezzi() >= n) {
 						System.out.println("Aggiunto con successo");
 					}else {
 						System.out.println("Non abbiamo questa disponibilità al momento");
@@ -88,7 +90,7 @@ public class Main3 {
 					System.out.println("Articolo inesistente!"); break;
 				}
 				break;
-				
+
 			case 2:
 				String art;
 				float code = 0;
@@ -100,7 +102,11 @@ public class Main3 {
 					c.removeArticle(articoli.get(k).getCodice());
 				}
 				break;
-				
+
+			case 3: 
+				System.out.println(c.getElencoArticoli());
+				break;
+
 			case 0:
 				System.out.println("Arrivederci!"); 
 				flag = true;
