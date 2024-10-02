@@ -30,8 +30,18 @@ public class Utils {
 		
 		List<Product> booksUnderPriced = filteredBooks.underUndred(products);
 		return booksUnderPriced;
-		
 	}
-
+	
+	public static List<Product> boysDiscounted(List<Product> products) {
+		
+		BooksInterface filteredBoys = (List<Product> productList) -> 
+		productList.stream()
+		.filter(p -> p.getCategory().equalsIgnoreCase("Boys"))
+		.map(p -> new Product(p.getId(), p.getName(), p.getCategory(), p.getPrice()-(p.getPrice()/10 )))
+		.collect(Collectors.toList());
+		
+		List<Product> boysUnderPriced = filteredBoys.underUndred(products);
+		return boysUnderPriced;
+	}
 
 }
