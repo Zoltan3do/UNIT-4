@@ -2,6 +2,9 @@ package main;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import entities.Customer;
+import entities.Order;
 import entities.Product;
 import utils.Utils;
 
@@ -15,9 +18,12 @@ public class Main {
         productList.add(new Product(5, "Baby Crib", "Baby", 200.00));
         productList.add(new Product(6, "Action Figure", "Boys", 60.00));
         productList.add(new Product(7, "Book C", "Books", 80.00));
+        
+        Customer c =new Customer(43562, "Manuel", 2);
+        Order o1 = new Order(1, productList, c);
 
         System.out.println("Prodotti categoria Baby:");
-        List<Product> babyProducts = Utils.babies(productList);
+        List<Product> babyProducts = Utils.babies(o1.getProducts());
         babyProducts.forEach(System.out::println);
 
         System.out.println("\nLibri con prezzo inferiore a 100:");

@@ -1,23 +1,21 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class Order {
 	
 	private long id;
-	private String status;
-	private String orderDate;
-	private double deliveryDate;
+	private String status = "started";
+	private LocalDate orderDate = LocalDate.now();
+	private LocalDate deliveryDate = LocalDate.now();
 	private List<Product> products;
 	private Customer customer;
 	
-	public Order(long id, String status, String orderDate, double deliveryDate, List<Product> products,
+	public Order(long id, List<Product> products,
 			Customer customer) {
 		super();
 		this.id = id;
-		this.status = status;
-		this.orderDate = orderDate;
-		this.deliveryDate = deliveryDate;
 		this.products = products;
 		this.customer = customer;
 	}
@@ -38,19 +36,19 @@ public class Order {
 		this.status = status;
 	}
 
-	public String getOrderDate() {
+	public LocalDate getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(String orderDate) {
+	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
 
-	public double getDeliveryDate() {
+	public LocalDate getDeliveryDate() {
 		return deliveryDate;
 	}
 
-	public void setDeliveryDate(double deliveryDate) {
+	public void setDeliveryDate(LocalDate deliveryDate) {
 		this.deliveryDate = deliveryDate;
 	}
 
