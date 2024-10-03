@@ -131,6 +131,18 @@ public class Main {
 		mediaPerCategoria.forEach((categoria,somma)->{
 			System.out.println("Categoria: "+categoria+", somma: "+somma);
 		});
+		
+		
+		
+		System.out.println("---------------------------------------------------------------------------");
+		/*
+		 * [EXTRA] Esercizio 6#
+		 * Usando la classe Apache Commons IO FileUtils implementare un metodo salvaProdottiSuDisco che 
+		 * salvi su disco un file contenente la lista dei prodotti. Utilizzare un formato simile al seguente
+		 * per storicizzare i dati su file:
+		 * nomeprodotto1@categoriaprodotto1@prezzoprodotto1@#nomeprodotto2@categoriaprodotto2@prezzoprodotto2
+		 * */
+		
 	}
-
+	
 }
