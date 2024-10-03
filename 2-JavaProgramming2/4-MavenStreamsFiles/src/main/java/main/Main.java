@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import entities.Customer;
 import entities.Order;
 import entities.Product;
+import utils.Utils;
 
 public class Main {
 
@@ -129,7 +130,7 @@ public class Main {
 						Collectors.summingDouble(product -> product.getPrice())));		
 		
 		mediaPerCategoria.forEach((categoria,somma)->{
-			System.out.println("Categoria: "+categoria+", somma: "+somma);
+			System.out.println("Categoria: " + categoria + ", somma: " + somma);
 		});
 		
 		
@@ -142,6 +143,22 @@ public class Main {
 		 * per storicizzare i dati su file:
 		 * nomeprodotto1@categoriaprodotto1@prezzoprodotto1@#nomeprodotto2@categoriaprodotto2@prezzoprodotto2
 		 * */
+		
+		Utils.salvaProdottiSuDisco(products);
+		
+		
+		
+		System.out.println("---------------------------------------------------------------------------");
+		/**
+		 * [EXTRA] Esercizio #7 
+		 * Sempre usando la classe Apache Commons IO FileUtils Implementare un metodo leggiProdottoDaDisco che
+		 * Riempia un ArrayList con il contenuto del file salvato al punto 6.
+		 */
+		
+		for(String s: Utils.leggiProdottiDaDisco()) {
+			System.out.println(s);
+		}
+		
 		
 	}
 	
