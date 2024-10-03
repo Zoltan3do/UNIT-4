@@ -21,6 +21,8 @@ public class Main {
         
         Customer c =new Customer(43562, "Manuel", 2);
         Order o1 = new Order(1, productList, c);
+        List<Order> orders = new ArrayList<Order>();
+        orders.add(o1);
 
         System.out.println("Prodotti categoria Baby:");
         List<Product> babyProducts = Utils.babies(o1.getProducts());
@@ -33,5 +35,8 @@ public class Main {
         System.out.println("\nProdotti categoria Boys con sconto del 10%:");
         List<Product> discountedBoys = Utils.boysDiscounted(productList);
         discountedBoys.forEach(System.out::println);
+        
+        System.out.println("\nProdotti di clienti di livello 2 in data range: ");
+        List<Product> prodottiInRange = Utils.layer2product(orders);
     }
 }

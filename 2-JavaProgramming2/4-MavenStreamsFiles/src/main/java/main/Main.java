@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 import entities.Customer;
@@ -61,7 +62,7 @@ public class Main {
 		
 		ordiniPerCliente.forEach((customer,ordersList) -> {
 			System.out.println("Customer: "+ customer);
-			ordersList.forEach(order->System.out.println("\n" + order));
+			ordersList.forEach(order -> System.out.println("\n" + order));
 		});
 		
 		
@@ -78,7 +79,7 @@ public class Main {
 						Collectors.summingDouble(order -> order.getProducts().stream()
 						.mapToDouble(Product::getPrice).sum())));
 		
-		totaleAcquisti.forEach((customer,total)->{
+		totaleAcquisti.forEach((customer,total) -> {
 			System.out.println("Customer: " + customer + ", articoli: " + total + "€");
 		});
 		
@@ -109,10 +110,9 @@ public class Main {
 		 * 
 		 * */
 		
-		Double average  = orders.stream().mapToDouble(order-> order.getProducts().stream()
+		OptionalDouble average  = orders.stream().mapToDouble(order -> order.getProducts().stream()
 				.mapToDouble(Product::getPrice).sum())
-				.average()
-				.orElse(0);
+				.average();
 		
 		System.out.println("La media dei prezzi di tutti gli ordini è: " + average);
 		
@@ -129,7 +129,7 @@ public class Main {
 				.collect(Collectors.groupingBy(Product::getCategory,
 						Collectors.summingDouble(product -> product.getPrice())));		
 		
-		mediaPerCategoria.forEach((categoria,somma)->{
+		mediaPerCategoria.forEach((categoria,somma) -> {
 			System.out.println("Categoria: " + categoria + ", somma: " + somma);
 		});
 		
