@@ -1,5 +1,3 @@
-
-
 	package entities;
 
 	import java.time.LocalDate;
@@ -27,7 +25,7 @@
 		@Column(name="data_evento", nullable =false)
 		private LocalDate dataEvento;
 		
-		@Column(name = "descrzione",nullable=false)
+		@Column(name = "descrzione", nullable=false)
 		private String descrizione;
 		
 		@Column(name ="tipo_evento")

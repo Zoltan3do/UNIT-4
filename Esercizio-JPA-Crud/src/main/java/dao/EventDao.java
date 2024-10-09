@@ -23,7 +23,6 @@ public class EventDao {
 	
 	public Evento findById(long idEvento) {
 		Evento found = em.find(Evento.class, idEvento);
-		if(found==null) throw new NotFoundException(idEvento);
 		return found;
 	}
 	

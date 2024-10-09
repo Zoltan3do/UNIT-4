@@ -3,8 +3,8 @@ package exceptions;
 public class NotFoundException extends RuntimeException {
 
 
-	public NotFoundException(long id) {
-		super("Il record con id " + id + " non è stato trovato");
+	public NotFoundException(String blogId) {
+		super("Il record con id " + blogId + " non è stato trovato");
 	}
 
 }
