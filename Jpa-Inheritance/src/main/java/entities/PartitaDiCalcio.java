@@ -17,11 +17,10 @@ public class PartitaDiCalcio extends Evento {
 	public PartitaDiCalcio() {}
 
 	public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipoEvento,
-			int maxPartecipanti, String squadraCasa, String squadraOspite, String squadraVincente, int golsSC, int golsSO) {
+			int maxPartecipanti, String squadraCasa, String squadraOspite, int golsSC, int golsSO) {
 		super(titolo, dataEvento, descrizione, tipoEvento, maxPartecipanti);
 		this.squadraCasa = squadraCasa;
 		this.squadraOspite = squadraOspite;
-		this.squadraVincente = squadraVincente;
 		this.golsSC = golsSC;
 		this.golsSO = golsSO;
 	}
@@ -61,9 +60,6 @@ public class PartitaDiCalcio extends Evento {
 		return "PartitaDiCalcio [squadraCasa=" + squadraCasa + ", squadraOspite=" + squadraOspite + ", squadraVincente="
 				+ squadraVincente + ", golsSC=" + golsSC + ", golsSO=" + golsSO + "]";
 	}
-	
-	
-	
 	
 
 }

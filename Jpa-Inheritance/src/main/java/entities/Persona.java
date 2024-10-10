@@ -2,10 +2,12 @@ package entities;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -22,6 +24,10 @@ public class Persona {
 	
 	@OneToMany(mappedBy="persona")
 	private List<Partecipazione> listaPartecipazioni;
+	
+	@ManyToMany
+	private Set<GaraDiAtletica> gare;
+	
 	
 	public Persona() {}
 
