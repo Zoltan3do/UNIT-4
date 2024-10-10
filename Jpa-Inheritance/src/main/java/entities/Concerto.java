@@ -3,10 +3,8 @@ package entities;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name="concerti")
 public class Concerto extends Evento{
 	
 	private GenereMusicale gm;

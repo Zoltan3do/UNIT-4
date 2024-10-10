@@ -4,11 +4,14 @@ import java.time.LocalDate;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.NamedQuery;
 
 @Entity
 @DiscriminatorValue("Calcio")
-@Table(name="calcio")
+@NamedQuery(name = "getPartiteVinteInCase",
+			query = "SELECT squadraCasa, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraCasa = p.squadraVincente")
+@NamedQuery(name = "getPartiteVinteInTrasferta",
+			query = "SELECT squadraOspite, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraOspite = p.squadraVincente")
 
 public class PartitaDiCalcio extends Evento {
 	private String squadraCasa, squadraOspite, squadraVincente = null;
