@@ -30,9 +30,8 @@ public class Partecipazione {
 	
 	public Partecipazione () {}
 
-	public Partecipazione(long id, Persona persona, Evento evento, Stato stato) {
+	public Partecipazione(Persona persona, Evento evento, Stato stato) {
 		super();
-		this.id = id;
 		this.persona = persona;
 		this.evento = evento;
 		this.stato = stato;

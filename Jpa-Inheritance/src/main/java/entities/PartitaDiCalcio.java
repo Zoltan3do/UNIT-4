@@ -8,10 +8,10 @@ import jakarta.persistence.NamedQuery;
 
 @Entity
 @DiscriminatorValue("Calcio")
-@NamedQuery(name = "getPartiteVinteInCase",
-			query = "SELECT squadraCasa, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraCasa = p.squadraVincente")
+@NamedQuery(name = "getPartiteVinteInCasa",
+			query = "SELECT squadraCasa, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraCasa = p.squadraVincente GROUP BY p.squadraCasa")
 @NamedQuery(name = "getPartiteVinteInTrasferta",
-			query = "SELECT squadraOspite, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraOspite = p.squadraVincente")
+			query = "SELECT squadraOspite, count(p.id) as conteggio FROM PartitaDiCalcio p WHERE p.squadraOspite = p.squadraVincente GROUP BY p.squadraOspite")
 
 public class PartitaDiCalcio extends Evento {
 	private String squadraCasa, squadraOspite, squadraVincente = null;

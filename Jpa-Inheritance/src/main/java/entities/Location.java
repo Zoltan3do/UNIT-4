@@ -21,9 +21,8 @@ public class Location {
 	
 	public Location() {}
 
-	public Location(long id, String nome, String citta) {
+	public Location(String nome, String citta) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.citta = citta;
 	}
